@@ -1,0 +1,79 @@
+VisualElement {
+}
+
+.MenuTitle {
+    -unity-font: url('project://database/Assets/Font/gravity/Gravity-Regular.otf?fileID=12800000&guid=0edd119f104f4b546b89218e38b31c03&type=3#Gravity-Regular');
+    -unity-font-definition: url('project://database/Assets/Font/oxanium/Oxanium-Regular%20SDF.asset?fileID=11400000&guid=3b705659577911549ad8bfb7147aaf9a&type=2#Oxanium-Regular SDF');
+    font-size: 20px;
+    white-space: nowrap;
+    height: 50px;
+    -unity-text-align: middle-left;
+}
+
+.MenuText {
+    -unity-font-definition: url('project://database/Assets/Font/oxanium/Oxanium-Regular%20SDF.asset?fileID=11400000&guid=3b705659577911549ad8bfb7147aaf9a&type=2#Oxanium-Regular SDF');
+    font-size: 100%;
+}
+
+.HideInUiBuilder {
+    display: none;
+}
+
+#HealthBar .unity-progress-bar__progress {
+    background-color: rgb(104, 13, 23);
+}
+
+.EnemyUIText {
+    color: rgb(211, 29, 29);
+}
+
+.PlayerUIButton {
+    -unity-font-definition: url('project://database/Assets/Font/oxanium/Oxanium-Regular%20SDF.asset?fileID=11400000&guid=3b705659577911549ad8bfb7147aaf9a&type=2#Oxanium-Regular SDF');
+    color: rgb(26, 176, 226);
+    width: 60px;
+    height: 15px;
+    background-image: resource('UI/Button');
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.UIListContainer {
+    height: 25px;
+    width: 60px;
+}
+
+#HealthBar .unity-progress-bar__background {
+    background-color: rgb(5, 23, 30);
+    border-left-color: rgb(25, 171, 220);
+    border-right-color: rgb(25, 171, 220);
+    border-top-color: rgb(25, 171, 220);
+    border-bottom-color: rgb(25, 171, 220);
+}
+
+.MenuContainer {
+    background-image: resource('UI/PlayerUIRect');
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.PlayerUIText {
+    color: rgb(30, 161, 205);
+    -unity-text-align: middle-left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 70px;
+    height: 15px;
+    -unity-font-definition: url('project://database/Assets/Font/oxanium/Oxanium-Regular%20SDF.asset?fileID=11400000&guid=3b705659577911549ad8bfb7147aaf9a&type=2#Oxanium-Regular SDF');
+}

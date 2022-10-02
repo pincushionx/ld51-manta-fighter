@@ -1,0 +1,144 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Main.uss?fileID=7433441132597879392&amp;guid=c6efc258efdc6c64f9db90713c9d5f09&amp;type=3#Main" />
+    <ui:VisualElement name="CenteredContainer" class="PlayerUIText" style="align-items: center; justify-content: center; width: 100%; height: 100%; border-left-color: rgba(196, 196, 196, 0); border-right-color: rgba(196, 196, 196, 0); border-top-color: rgba(196, 196, 196, 0); border-bottom-color: rgba(196, 196, 196, 0); flex-basis: auto; flex-grow: 0; flex-shrink: 1;">
+        <ui:VisualElement name="Messages" style="width: 30%;">
+            <ui:VisualElement name="Tut0" class="MenuContainer HideInUiBuilder" style="width: 100%;">
+                <ui:Label text="Manta Fighter" display-tooltip-when-elided="true" name="MessageTitle" class="MenuTitle" style="height: auto;" />
+                <ui:Label text="We need to destroy the weapon at the planet&apos;s core! The gate to the core will only open when there are no more active bases to protect it. Destroy all of the active bases, then destroy the enemy&apos;s greatest weapon at the planet&apos;s core!&#10;&#10;This is our lst chance! The enemy grows stronger every 10 seconds! Take your Manta Fighter and destroy that weapon!&#10;&#10;Bases are becoming operational. You need to destroy all active bases quickly (those ar the red ones)! Every 10 seconds they are activating bases and deploying fighters." display-tooltip-when-elided="true" name="MessageText" class="MenuText" style="white-space: normal;" />
+                <ui:VisualElement name="ButtonContainer" style="bottom: auto; height: 30px; justify-content: flex-end; align-items: flex-end;">
+                    <ui:Button text="Ok!" display-tooltip-when-elided="true" name="OkButton" class="MenuButton PlayerUIButton" style="position: relative; right: auto; height: 20px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Controls" class="MenuContainer" style="width: 100%;">
+                <ui:Label text="Controls" display-tooltip-when-elided="true" name="MessageTitle" class="MenuTitle" style="height: auto;" />
+                <ui:Label text="Up arrow - move forward&#10;W - rotate down&#10;S - rotate up&#10;A - rotate left&#10;D - rotate right&#10;Spacebar - shoot&#10;&#10;Upgrades (available every 10s)&#10;1 - Get more bullets&#10;2 - Upgrade speed&#10;3 - Heal" display-tooltip-when-elided="true" name="MessageText" class="MenuText" style="white-space: normal;" />
+                <ui:VisualElement name="ButtonContainer" style="bottom: auto; height: 30px; justify-content: flex-end; align-items: flex-end;">
+                    <ui:Button text="Ok!" display-tooltip-when-elided="true" name="OkButton" class="MenuButton PlayerUIButton" style="position: relative; right: auto; height: 20px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="ShowUpgrades" class="MenuContainer HiddenByDefault HideInUiBuilder">
+                <ui:Label text="Welcome to game!" display-tooltip-when-elided="true" name="MessageTitle" class="MenuTitle" />
+                <ui:Label text="Tut3" display-tooltip-when-elided="true" name="MessageText" class="MenuText" />
+                <ui:VisualElement name="ButtonContainer" style="bottom: auto; height: 30px; justify-content: flex-end; align-items: flex-end;">
+                    <ui:Button text="Ok!" display-tooltip-when-elided="true" name="OkButton" class="MenuButton PlayerUIButton" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="PauseMenu" class="MenuContainer HideInUiBuilder" style="width: 25%;">
+            <ui:Label text="Paused!" display-tooltip-when-elided="true" name="Title" class="MenuTitle" style="height: auto;" />
+            <ui:Label display-tooltip-when-elided="true" name="Text" />
+            <ui:Slider picking-mode="Ignore" label="Master Volume" value="50" high-value="100" name="MasterVolumeSlider" />
+            <ui:VisualElement name="CenteredContainer" style="align-items: center; justify-content: center; padding-left: 2%; padding-right: 2%; padding-top: 2%; padding-bottom: 2%;">
+                <ui:Button text="Resume" display-tooltip-when-elided="true" name="ResumeButton" class="MenuButton PlayerUIButton" style="width: 70px;" />
+                <ui:Button text="Exit" display-tooltip-when-elided="true" name="ExitButton" class="MenuButton PlayerUIButton" style="width: 70px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="WinCondition" class="MenuContainer HideInUiBuilder">
+            <ui:Label text="Mission Accomplished!" display-tooltip-when-elided="true" name="MessageTitle" class="MenuTitle" style="height: 20px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 10px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+            <ui:Label text="The enemy&apos;s weapon has been destroyed, and there can be peace again... for 10s.&#10;&#10;Thanks for playing! Restart the game to play again." display-tooltip-when-elided="true" name="MessageText" class="PlayerUIText" style="width: 100%; height: auto; margin-bottom: 5px; flex-wrap: nowrap; white-space: normal;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="LoseCondition" class="MenuContainer HideInUiBuilder">
+            <ui:Label text="Oh no! The mission failed!" display-tooltip-when-elided="true" name="MessageTitle" class="MenuTitle" style="height: 20px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 10px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+            <ui:Label text="Thanks for playing! Restart the game to try again." display-tooltip-when-elided="true" name="MessageText" class="PlayerUIText" style="width: 100%; height: auto; margin-bottom: 5px; flex-wrap: nowrap; white-space: normal;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="RightUI" style="right: 0; bottom: 0; position: absolute; width: 18%; background-image: resource(&apos;UI/Right UI&apos;); flex-direction: column-reverse; align-items: flex-end; justify-content: flex-start; height: 80%;">
+        <ui:VisualElement name="EnemyUpgrades" style="height: 32%; width: 100%; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; position: relative; bottom: auto; flex-direction: column; justify-content: center; align-items: flex-end;">
+            <ui:Label text="Enemy Upgrades" display-tooltip-when-elided="true" name="Title" class="MenuTitle EnemyUIText" style="-unity-text-align: middle-right; height: 30px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%;" />
+            <ui:VisualElement name="BasesContainer" class="UIListContainer" style="flex-direction: row-reverse; width: 100%;">
+                <ui:Label text="Bases activating" display-tooltip-when-elided="true" name="Label" class="MenuText EnemyUIText" style="width: 130px; -unity-text-align: upper-right;" />
+                <ui:Label text="00" display-tooltip-when-elided="true" name="Count" class="MenuText EnemyUIText" />
+            </ui:VisualElement>
+            <ui:VisualElement name="FightersContainer" class="UIListContainer" style="flex-direction: row-reverse; width: 100%;">
+                <ui:Label text="Fighters deploying" display-tooltip-when-elided="true" name="Label" class="MenuText EnemyUIText" style="width: 130px; -unity-text-align: upper-right;" />
+                <ui:Label text="00&#10;" display-tooltip-when-elided="true" name="Count" class="MenuText EnemyUIText" />
+            </ui:VisualElement>
+            <ui:VisualElement name="EnemyUpgradeTimerContainer" class="UIListContainer" style="flex-direction: row-reverse; width: 100%;">
+                <ui:Label text="In 10 s" display-tooltip-when-elided="true" name="EnemyUpgradeTimer" class="MenuText EnemyUIText" style="width: 150px; -unity-text-align: middle-center; height: 30px; font-size: 16px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Status" style="height: 60%; width: 130px; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 0;">
+            <ui:Label text="Status" display-tooltip-when-elided="true" name="Title" class="MenuTitle EnemyUIText" style="-unity-text-align: middle-right; height: 30px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+            <ui:VisualElement name="BasesGroup" class="UIListContainer" style="flex-direction: column; width: 100%; justify-content: flex-start; height: auto; margin-bottom: 10px;">
+                <ui:VisualElement name="TitleContainer" class="UIListContainer" style="flex-direction: row-reverse; width: 100%;">
+                    <ui:Label text="Bases" display-tooltip-when-elided="true" name="Label" class="MenuText EnemyUIText" style="width: 70px; -unity-text-align: upper-right; -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="OperationalBasesContainer" class="UIListContainer" style="flex-direction: row-reverse; width: 100%;">
+                    <ui:Label text="Active" display-tooltip-when-elided="true" name="Label" class="MenuText EnemyUIText" style="width: 70px; -unity-text-align: upper-right;" />
+                    <ui:Label text="00&#10;" display-tooltip-when-elided="true" name="Count" class="MenuText EnemyUIText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="DestroyedBasesContainer" class="UIListContainer" style="flex-direction: row-reverse; width: 100%;">
+                    <ui:Label text="Destroyed" display-tooltip-when-elided="true" name="Label" class="MenuText EnemyUIText" style="width: 70px; -unity-text-align: upper-right;" />
+                    <ui:Label text="00&#10;" display-tooltip-when-elided="true" name="Count" class="MenuText EnemyUIText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="InoperationalBasesContainer" class="UIListContainer" style="flex-direction: row-reverse; width: 100%;">
+                    <ui:Label text="Inactive" display-tooltip-when-elided="true" name="Label" class="MenuText EnemyUIText" style="width: 70px; -unity-text-align: upper-right;" />
+                    <ui:Label text="00&#10;" display-tooltip-when-elided="true" name="Count" class="MenuText EnemyUIText" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="FightersGroup" class="UIListContainer" style="flex-direction: column; width: 100%; align-items: flex-end; height: auto;">
+                <ui:Label text="Fighters" display-tooltip-when-elided="true" name="Label" class="MenuText EnemyUIText" style="width: 70px; -unity-text-align: upper-right; -unity-font-style: bold;" />
+                <ui:VisualElement name="ActiveFightersContainer" class="UIListContainer" style="flex-direction: row-reverse; width: 100%;">
+                    <ui:Label text="Active" display-tooltip-when-elided="true" name="Label" class="MenuText EnemyUIText" style="width: 70px; -unity-text-align: upper-right;" />
+                    <ui:Label text="00&#10;" display-tooltip-when-elided="true" name="Count" class="MenuText EnemyUIText" />
+                </ui:VisualElement>
+                <ui:VisualElement name="DestroyedFightersContainer" class="UIListContainer" style="flex-direction: row-reverse; width: 100%;">
+                    <ui:Label text="Destroyed" display-tooltip-when-elided="true" name="Label" class="MenuText EnemyUIText" style="width: 70px; -unity-text-align: upper-right;" />
+                    <ui:Label text="00&#10;" display-tooltip-when-elided="true" name="Count" class="MenuText EnemyUIText" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="LeftUI" focusable="false" style="background-image: resource(&apos;UI/Left UI&apos;); position: absolute; left: 0; top: 0; width: 20%; height: 80%; justify-content: flex-start; align-items: flex-start;">
+        <ui:VisualElement style="width: 100%; height: auto; justify-content: center; align-items: center; margin-bottom: 5px; margin-top: 10px; flex-direction: row;">
+            <ui:Button text="How do I play?" display-tooltip-when-elided="true" name="ShowTutorialButton" class="PlayerUIButton" style="overflow: visible; width: auto; height: auto; padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;" />
+            <ui:Button text="Pause" display-tooltip-when-elided="true" name="PauseButton" class="PlayerUIButton" style="overflow: visible; width: auto; height: auto; padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Upgrades" focusable="false" style="height: 32%; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; -unity-background-scale-mode: stretch-to-fill; width: 100%;">
+            <ui:Label text="Upgrades" display-tooltip-when-elided="true" name="Title" class="MenuTitle PlayerUIText" style="height: auto; width: 100%; font-size: 20%; margin-bottom: 5px;" />
+            <ui:VisualElement name="UpgradeTimerContainer" style="width: 100%; height: 100%; justify-content: flex-start; align-items: flex-start; -unity-text-align: middle-center;">
+                <ui:Label text="Available in 10s" display-tooltip-when-elided="true" name="UpgradeTimer" class="PlayerUIText MenuText" style="width: 100%; height: 30%; font-size: 16px; -unity-text-align: middle-center;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Shop" focusable="false" style="height: 322px; width: 100%;">
+                <ui:VisualElement name="ShopBulletsContainer" focusable="false" class="UIListContainer" style="flex-direction: row; align-items: center; width: 100%;">
+                    <ui:Label text="1" display-tooltip-when-elided="true" name="Key" class="PlayerUIText MenuText" style="width: 15px;" />
+                    <ui:Label text="Bullets" display-tooltip-when-elided="true" name="Label" class="PlayerUIText MenuText" />
+                    <ui:Label text="+25" display-tooltip-when-elided="true" name="Count" class="PlayerUIText MenuText" style="width: 35px;" />
+                    <ui:Button text="Upgrade" display-tooltip-when-elided="true" name="Buy" class="PlayerUIButton" style="overflow: visible;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ShopSpeedContainer" class="UIListContainer" style="flex-direction: row; align-items: center;">
+                    <ui:Label text="2" display-tooltip-when-elided="true" name="Key" class="PlayerUIText MenuText" style="width: 15px;" />
+                    <ui:Label text="Speed" display-tooltip-when-elided="true" name="Label" class="PlayerUIText MenuText" />
+                    <ui:Label text="+5" display-tooltip-when-elided="true" name="Count" class="PlayerUIText MenuText" style="width: 35px;" />
+                    <ui:Button text="Upgrade" display-tooltip-when-elided="true" name="Buy" class="PlayerUIButton" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ShopHealContainer" class="UIListContainer" style="flex-direction: row; align-items: center;">
+                    <ui:Label text="3" display-tooltip-when-elided="true" name="Key" class="PlayerUIText MenuText" style="width: 15px;" />
+                    <ui:Label text="Heal" display-tooltip-when-elided="true" name="Label" class="PlayerUIText MenuText" />
+                    <ui:Label text="+15" display-tooltip-when-elided="true" name="Count" class="PlayerUIText MenuText" style="width: 35px;" />
+                    <ui:Button text="Upgrade" display-tooltip-when-elided="true" name="Buy" class="PlayerUIButton" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Status" style="height: 200px; width: 130px; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+            <ui:Label text="Status" display-tooltip-when-elided="true" name="Title" class="MenuTitle PlayerUIText" style="height: 30px;" />
+            <ui:VisualElement name="BulletsContainer" class="UIListContainer" style="flex-direction: row;">
+                <ui:Label text="Bullets" display-tooltip-when-elided="true" name="Label" class="PlayerUIText MenuText" />
+                <ui:Label text="00" display-tooltip-when-elided="true" name="Count" class="PlayerUIText MenuText" />
+            </ui:VisualElement>
+            <ui:VisualElement name="SpeedContainer" class="UIListContainer" style="flex-direction: row;">
+                <ui:Label text="Speed" display-tooltip-when-elided="true" name="Label" class="PlayerUIText MenuText" style="width: 70px; height: 10px;" />
+                <ui:Label text="00" display-tooltip-when-elided="true" name="Count" class="PlayerUIText MenuText" style="height: 10px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="HealthBarContainer" style="width: 100%; height: auto;">
+                <ui:ProgressBar title="Health" name="HealthBar" low-value="0" class="PlayerUIText" style="width: 100%; height: auto;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="BottomUI" style="background-image: resource(&apos;UI/Bottom UI&apos;); position: relative; bottom: auto; right: 20%; left: 10%; width: 68%; height: 100px; align-items: flex-start;">
+        <ui:VisualElement name="MessageContainer" style="justify-content: center; align-items: flex-start; position: absolute; bottom: 0; width: 100%; height: 50%; flex-direction: row;">
+            <ui:Label text="Messages" display-tooltip-when-elided="true" name="Label" class="PlayerUIText MenuTitle" style="width: 15%; font-size: 18px; -unity-text-align: middle-center; height: 100%;" />
+            <ui:Label display-tooltip-when-elided="true" name="Message" class="MenuText PlayerUIText" style="width: 85%; -unity-text-align: middle-center; height: 100%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
